@@ -1,0 +1,1105 @@
+/* --- Estilos Generales --- */
+/*
+   Esta sección define los estilos básicos y globales para toda la página,
+   como la fuente, el color de fondo y el espaciado.
+*/
+
+
+body {
+    font-family: 'Poppins', sans-serif; /* Aplica la fuente 'Poppins' a todo el texto del cuerpo */
+    margin: 0;                          /* Elimina el margen por defecto del navegador */
+    padding: 0;                         /* Elimina el relleno por defecto del navegador */
+    box-sizing: border-box;             /* Asegura que el padding y el border no aumenten el tamaño de los elementos */
+    background-color: #f8f8f8;          /* Establece el color de fondo rosado claro */
+    color: #333;                        /* Define un color de texto gris oscuro por defecto */
+}
+
+/*
+   Regla para centrar el contenido principal de CUALQUIER PÁGINA que use <main>.
+   Esto asegura que el contenido no ocupe todo el ancho de la pantalla en monitores grandes.
+*/
+main {
+    max-width: 1200px;  /* Define un ancho máximo para el contenido principal */
+    margin: 0 auto;     /* Centra el contenedor horizontalmente en la página */
+    padding: 0 20px;    /* Añade un relleno horizontal para evitar que el contenido toque los bordes */
+    box-sizing: border-box; /* Mantiene el padding dentro del ancho del elemento */
+}
+
+/* --- Encabezado Principal --- */
+/*
+   Estilos para la barra de navegación superior, que contiene el logo, título y enlaces.
+*/
+.main-header {
+    background-color: #ffb3d9;          /* Color de fondo rosado medio */
+    padding: 15px 20px;                 /* Relleno interior */
+    display: flex;                      /* Usa Flexbox para alinear los elementos en una fila */
+    justify-content: space-between;     /* Distribuye el espacio entre los elementos: logo a la izquierda, nav a la derecha */
+    align-items: center;                /* Centra los elementos verticalmente */
+    border-bottom: 5px solid #ff80bf;   /* Borde inferior rosado fuerte */
+    position: relative;                 /* Permite posicionar el z-index */
+    z-index: 1000;                      /* Asegura que el encabezado esté siempre encima de otros elementos */
+
+}
+
+
+.logo-link {
+    display: flex;          /* Usa Flexbox para alinear la imagen y el texto del logo si lo hubiera */
+    align-items: center;    /* Centra los elementos verticalmente */
+}
+
+.logo {
+    height: 80px;           /* Altura del logo */
+    border-radius: 50%;     /* Hace que la imagen del logo sea circular */
+    border: 3px solid transparent; /* Borde transparente para un efecto visual */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra suave para el logo */
+}
+
+.header-center-content {
+    flex-grow: 1;           /* Permite que este elemento ocupe todo el espacio disponible */
+    text-align: center;     /* Centra el texto dentro del contenedor */
+}
+
+.main-site-title {
+    font-family: "Gruppo", sans-serif;  /* Aplica la fuente "Gruppo" al título principal */
+    color: #E64A8E;                     /* Color de texto rosado fuerte */
+    font-size: 3.5em;                   /* Tamaño de fuente grande */
+    margin: 0;                          /* Elimina el margen por defecto */
+    line-height: 1;                     /* Espaciado de línea ajustado */
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Sombra de texto sutil */
+}
+
+/* --- Navegación Principal --- */
+/*
+   Estilos para la lista de enlaces de navegación.
+*/
+.main-nav ul {
+    list-style: none;       /* Elimina los puntos de la lista */
+    padding: 0;             /* Elimina el padding por defecto de la lista */
+    margin: 0;              /* Elimina el margen por defecto de la lista */
+    display: flex;          /* Usa Flexbox para alinear los ítems en una fila */
+    justify-content: center;/* Centra los ítems de navegación horizontalmente */
+    gap: 25px;              /* Espacio entre cada ítem de la lista */
+    margin-top: 10px;       /* Margen superior */
+}
+
+.main-nav ul li a {
+    text-decoration: none;      /* Elimina el subrayado de los enlaces */
+    color: #E64A8E;             /* Color de texto del enlace */
+    font-weight: bold;          /* Texto en negrita */
+    padding: 8px 15px;          /* Relleno interior del enlace */
+    border-radius: 20px;        /* Bordes redondeados */
+    background-color: #fff;     /* Fondo blanco para los enlaces */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Añade una transición suave a los cambios */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+.main-nav ul li a:hover {
+    background-color: #E64A8E;  /* Cambia el color de fondo a rosado fuerte al pasar el cursor */
+    color: white;               /* Cambia el color del texto a blanco al pasar el cursor */
+    transform: translateY(-2px);/* Eleva ligeramente el enlace para un efecto interactivo */
+}
+
+/* --- Estilos de las Secciones "Sobre" y "Contacto" (Index.html) --- */
+/*
+   Estas reglas definen el estilo de los bloques de contenido de la página de inicio.
+*/
+.about-section, .contact-section {
+    max-width: 900px;           /* Ancho máximo del contenedor */
+    margin: 50px auto;          /* Margen superior/inferior de 50px y centrado horizontal */
+    padding: 30px;              /* Relleno interior */
+    background-color: #fff;     /* Fondo blanco */
+    border-radius: 10px;        /* Bordes redondeados */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15); /* Sombra para dar profundidad */
+    text-align: center;         /* Centra el texto dentro del contenedor */
+    line-height: 1.6;           /* Espaciado de línea para mejor legibilidad */
+}
+
+.about-section h2,
+.contact-section h2,
+.gallery-title {
+    font-family: "Gruppo", sans-serif;  /* Fuente para los títulos de sección */
+    color: #E64A8E;                     /* Color rosado fuerte */
+    font-size: 3em;                     /* Tamaño de fuente grande */
+    margin-bottom: 20px;                /* Margen inferior */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* Sombra de texto sutil */
+}
+
+.about-section p,
+.contact-section p {
+    font-size: 1.1em;   /* Tamaño de fuente para los párrafos */
+    color: #555;        /* Color de texto gris oscuro */
+    margin-bottom: 15px;/* Margen inferior */
+}
+
+/* --- Galería de Charms (galeria.html y Index.html) --- */
+/*
+   Estilos para la cuadrícula de productos.
+*/
+.gallery-title {
+    text-align: center; /* Centra el título de la galería */
+    margin: 40px 0 20px;/* Margen superior e inferior */
+    font-size: 3em;     /* Tamaño de fuente grande */
+}
+
+.gallery-container {
+    display: grid;                          /* Usa Gridbox para crear una cuadrícula de ítems */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Crea columnas flexibles */
+    gap: 30px;                              /* Espacio entre los ítems de la cuadrícula */
+    max-width: 1200px;                      /* Ancho máximo */
+    margin: 0 auto 50px;                    /* Centrado con margen inferior */
+    padding: 20px;                          /* Relleno interior */
+}
+
+.charm-item {
+    background-color: #fff;                 /* Fondo blanco */
+    border-radius: 10px;                    /* Bordes redondeados */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra para profundidad */
+    overflow: hidden;                       /* Esconde el contenido que se desborde, como los bordes de la imagen */
+    text-align: center;                     /* Centra el texto */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para los efectos */
+    padding-bottom: 15px;                   /* Relleno inferior */
+}
+
+.charm-item:hover {
+    transform: translateY(-5px);    /* Eleva el ítem al pasar el cursor */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* Sombra más pronunciada al pasar el cursor */
+}
+
+.charm-item a {
+    text-decoration: none;  /* Elimina el subrayado de los enlaces */
+    color: inherit;         /* Hereda el color del texto del padre */
+}
+
+.charm-item img {
+    width: 100%;            /* La imagen ocupa todo el ancho del contenedor */
+    height: 250px;          /* Altura fija para las imágenes */
+    object-fit: contain;    /* Asegura que la imagen se ajuste sin ser recortada */
+    display: block;         /* Elimina el espacio extra debajo de la imagen */
+    border-bottom: 1px solid #eee; /* Borde inferior para separar la imagen del texto */
+    padding: 10px;          /* Relleno interno */
+}
+
+.charm-item h2 {
+    font-size: 1.5em;       /* Tamaño de fuente para el nombre del charm */
+    color: #E64A8E;         /* Color rosado fuerte */
+    margin: 15px 10px 10px; /* Margen alrededor del título */
+    font-family: 'Poppins', sans-serif; /* Fuente para el título */
+}
+
+.charm-item .price {
+    font-size: 1.2em;       /* Tamaño de fuente para el precio */
+    font-weight: bold;      /* Texto en negrita */
+    color: #555;            /* Color de texto gris oscuro */
+    display: block;         /* Hace que el precio ocupe su propia línea */
+    margin-bottom: 15px;    /* Margen inferior */
+}
+
+.add-to-cart-btn {
+    background-color: #E64A8E;              /* Color de fondo rosado fuerte */
+    color: white;                           /* Color de texto blanco */
+    padding: 12px 25px;                     /* Relleno interno */
+    border: none;                           /* Sin borde */
+    border-radius: 25px;                    /* Bordes redondeados */
+    font-size: 1em;                         /* Tamaño de fuente */
+    cursor: pointer;                        /* Cambia el cursor a una mano */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+    margin-top: 10px;                       /* Margen superior */
+    display: inline-block;                  /* Permite que el botón no ocupe todo el ancho */
+}
+
+.add-to-cart-btn:hover {
+    background-color: #d03a7a;  /* Cambia el color de fondo al pasar el cursor */
+    transform: scale(1.05);     /* Aumenta ligeramente el tamaño del botón */
+}
+
+/* --- Sección de Contacto (Index.html) --- */
+/*
+   Estilos para el formulario de contacto.
+*/
+.contact-section form {
+    display: flex;              /* Usa Flexbox para organizar los elementos del formulario */
+    flex-direction: column;     /* Apila los elementos verticalmente */
+    max-width: 500px;           /* Ancho máximo del formulario */
+    margin: 0 auto;             /* Centra el formulario */
+    gap: 15px;                  /* Espacio entre los elementos del formulario */
+    text-align: left;           /* Alinea el texto a la izquierda */
+}
+
+.contact-section label {
+    font-weight: bold;      /* Texto de las etiquetas en negrita */
+    color: #E64A8E;         /* Color de las etiquetas */
+}
+
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section textarea {
+    padding: 10px;          /* Relleno interno */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 5px;     /* Bordes redondeados */
+    font-size: 1em;         /* Tamaño de fuente */
+    width: 100%;            /* El elemento ocupa todo el ancho disponible */
+    box-sizing: border-box; /* Incluye el padding y el border en el ancho total */
+}
+
+.contact-section textarea {
+    resize: vertical;       /* Permite redimensionar solo verticalmente */
+    min-height: 100px;      /* Altura mínima del área de texto */
+}
+
+.contact-section button[type="submit"] {
+    background-color: #E64A8E;          /* Color de fondo del botón */
+    color: white;                       /* Color de texto blanco */
+    padding: 12px 20px;                 /* Relleno interno */
+    border: none;                       /* Sin borde */
+    border-radius: 25px;                /* Bordes redondeados */
+    font-size: 1.1em;                   /* Tamaño de fuente */
+    cursor: pointer;                    /* Cursor de mano */
+    transition: background-color 0.3s ease; /* Transición suave */
+    margin-top: 10px;                   /* Margen superior */
+    align-self: center;                 /* Centra el botón dentro del contenedor flex */
+}
+
+.contact-section button[type="submit"]:hover {
+    background-color: #d03a7a;  /* Cambia el color de fondo al pasar el cursor */
+}
+
+/* --- Estilos para Páginas de Detalle de Producto (pX.html) --- */
+/*
+   Estilos para la página individual de cada producto.
+*/
+.charm-detail-page {
+    max-width: 900px;                   /* Ancho máximo */
+    margin: 40px auto;                  /* Centrado horizontal con margen superior/inferior */
+    padding: 25px;                      /* Relleno interior */
+    background-color: #fff;             /* Fondo blanco */
+    border-radius: 10px;                /* Bordes redondeados */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15); /* Sombra para profundidad */
+    display: flex;                      /* Usa Flexbox */
+    flex-direction: column;             /* Apila los elementos verticalmente */
+    align-items: center;                /* Centra los elementos horizontalmente */
+    text-align: center;                 /* Centra el texto */
+}
+
+.charm-detail-card {
+    display: flex;          /* Usa Flexbox para el layout de la tarjeta de detalle */
+    flex-wrap: wrap;        /* Permite que los elementos se envuelvan a la siguiente línea si no hay espacio */
+    align-items: center;    /* Centra los elementos verticalmente */
+    justify-content: center;/* Centra los elementos horizontalmente */
+    gap: 30px;              /* Espacio entre los elementos */
+    width: 100%;            /* Ocupa todo el ancho disponible */
+}
+
+.charm-detail-image-container {
+    flex: 1;                /* Permite que el contenedor de la imagen ocupe espacio flexible */
+    min-width: 300px;       /* Ancho mínimo para la imagen */
+}
+
+.charm-detail-image-container img {
+    max-width: 100%;        /* La imagen no superará el ancho de su contenedor */
+    height: auto;           /* Mantiene la proporción de la imagen */
+    object-fit: contain;    /* Ajusta la imagen sin recortar */
+    border-radius: 10px;    /* Bordes redondeados */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra */
+    padding: 10px;          /* Relleno interior */
+}
+
+.charm-detail-info {
+    flex: 1;                /* Permite que el contenedor de información ocupe espacio flexible */
+    min-width: 300px;       /* Ancho mínimo para la información */
+    text-align: left;       /* Alinea el texto a la izquierda */
+}
+
+.charm-detail-info h2 {
+    font-family: "Gruppo", sans-serif;  /* Fuente para el título */
+    color: #E64A8E;                     /* Color rosado fuerte */
+    font-size: 2.5em;                   /* Tamaño de fuente */
+    margin-bottom: 10px;                /* Margen inferior */
+}
+
+.charm-description {
+    font-size: 1.1em;       /* Tamaño de fuente para la descripción */
+    color: #555;            /* Color de texto gris oscuro */
+    line-height: 1.6;       /* Espaciado de línea */
+    margin-bottom: 20px;    /* Margen inferior */
+}
+
+.charm-detail-price {
+    font-size: 1.8em;       /* Tamaño de fuente para el precio */
+    font-weight: bold;      /* Texto en negrita */
+    color: #E64A8E;         /* Color rosado fuerte */
+    display: block;         /* Ocupa su propia línea */
+    margin-bottom: 20px;    /* Margen inferior */
+}
+
+.availability {
+    font-size: 1em;         /* Tamaño de fuente para la disponibilidad */
+    color: #4CAF50;         /* Color verde */
+    font-weight: bold;      /* Texto en negrita */
+    margin-top: 15px;       /* Margen superior */
+}
+
+/* --- Contenedores de enlaces de regreso --- */
+/*
+   Estilos para los enlaces que regresan a la página anterior.
+*/
+.back-link-container {
+    margin-top: 30px;       /* Margen superior */
+    text-align: center;     /* Centra el enlace */
+}
+
+.back-link-container a {
+    display: inline-block;                  /* Permite aplicar padding y transformaciones */
+    background-color: #ffb3d9;              /* Color de fondo */
+    color: #E64A8E;                         /* Color de texto */
+    padding: 12px 25px;                     /* Relleno interno */
+    text-decoration: none;                  /* Elimina el subrayado */
+    border-radius: 25px;                    /* Bordes redondeados */
+    font-weight: bold;                      /* Texto en negrita */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);  /* Sombra */
+}
+
+.back-link-container a:hover {
+    background-color: #E64A8E;      /* Cambia el color de fondo al pasar el cursor */
+    color: white;                   /* Cambia el color de texto a blanco */
+    transform: translateY(-2px);    /* Eleva el enlace */
+}
+
+/* --- Footer --- */
+/*
+   Estilos para el pie de página.
+*/
+footer {
+    background-color: #ff80bf;  /* Color de fondo rosado fuerte */
+    color: white;               /* Color de texto blanco */
+    text-align: center;         /* Centra el texto */
+    padding: 20px;              /* Relleno interior */
+    margin-top: 50px;           /* Margen superior para separarlo del contenido */
+    font-size: 0.9em;           /* Tamaño de fuente más pequeño */
+}
+
+/* --- ESTILOS PARA EL CARRITO (carrito.html) --- */
+/*
+   Estilos específicos para la página del carrito.
+*/
+.cart-page-content {
+    max-width: 1200px;                      /* Ancho máximo */
+    margin: 40px auto;                      /* Centrado horizontal con margen superior/inferior */
+    padding: 20px;                          /* Relleno interior */
+    background-color: #fff;                 /* Fondo blanco */
+    border-radius: 8px;                     /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra para profundidad */
+}
+
+.cart-page-content h2 {
+    text-align: center;         /* Centra el título */
+    color: #E64A8E;             /* Color rosado fuerte */
+    margin-bottom: 30px;        /* Margen inferior */
+    font-size: 2.2em;           /* Tamaño de fuente */
+    font-family: "Gruppo", sans-serif; /* Fuente para el título */
+}
+
+.empty-cart-message-style {
+    text-align: center;         /* Centra el mensaje */
+    margin-top: 30px;           /* Margen superior */
+    margin-bottom: 30px;        /* Margen inferior */
+    font-size: 1.3em;           /* Tamaño de fuente */
+    color: #666;                /* Color de texto gris */
+    padding: 20px;              /* Relleno interior */
+    border: 1px dashed #E64A8E; /* Borde punteado rosado */
+    border-radius: 5px;         /* Bordes redondeados */
+    background-color: #ffe6f0;  /* Fondo rosado claro */
+}
+
+/* Diseño de dos columnas para el carrito */
+.cart-layout {
+    display: flex;          /* Usa Flexbox para crear dos columnas */
+    flex-wrap: wrap;        /* Permite que las columnas se envuelvan en pantallas pequeñas */
+    gap: 30px;              /* Espacio entre las columnas */
+    margin-top: 30px;       /* Margen superior */
+}
+
+.cart-items-section {
+    flex: 2;                /* Ocupa 2/3 del espacio disponible */
+    min-width: 300px;       /* Ancho mínimo */
+    background-color: #fcfcfc; /* Fondo casi blanco */
+    border: 1px solid #eee; /* Borde gris claro */
+    border-radius: 5px;     /* Bordes redondeados */
+    padding: 20px;          /* Relleno interior */
+}
+
+.cart-summary-section {
+    flex: 1;                /* Ocupa 1/3 del espacio disponible */
+    min-width: 250px;       /* Ancho mínimo */
+    background-color: #fcfcfc; /* Fondo casi blanco */
+    border: 1px solid #eee; /* Borde gris claro */
+    border-radius: 5px;     /* Bordes redondeados */
+    padding: 20px;          /* Relleno interior */
+    display: flex;          /* Usa Flexbox */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+}
+
+.cart-summary-section h3 {
+    text-align: center;             /* Centra el título */
+    color: #E64A8E;                 /* Color rosado fuerte */
+    margin-bottom: 20px;            /* Margen inferior */
+    font-size: 1.8em;               /* Tamaño de fuente */
+    font-family: 'Poppins', sans-serif; /* Fuente */
+    border-bottom: 1px solid #f0e0e0; /* Borde inferior */
+    padding-bottom: 10px;           /* Relleno inferior */
+}
+
+/* Estilos para cada ítem individual en el carrito */
+.cart-item {
+    display: flex;                  /* Usa Flexbox para alinear los elementos de cada ítem */
+    align-items: center;            /* Centra los elementos verticalmente */
+    padding: 15px 0;                /* Relleno superior/inferior */
+    border-bottom: 1px solid #eee;  /* Borde inferior para separar ítems */
+    margin-bottom: 15px;            /* Margen inferior */
+}
+
+.cart-item:last-child {
+    border-bottom: none;    /* Elimina el borde inferior del último ítem */
+    margin-bottom: 0;       /* Elimina el margen inferior del último ítem */
+}
+
+.cart-item-image {
+    width: 80px;            /* Ancho de la imagen */
+    height: 80px;           /* Altura de la imagen */
+    object-fit: contain;    /* Ajusta la imagen sin recortar */
+    border-radius: 5px;     /* Bordes redondeados */
+    margin-right: 15px;     /* Margen a la derecha */
+    border: 1px solid #ddd; /* Borde gris */
+    padding: 5px;           /* Relleno interior */
+}
+
+.cart-item-details {
+    flex-grow: 1;           /* Permite que ocupe el espacio restante */
+    margin-right: 15px;     /* Margen a la derecha */
+}
+
+.cart-item-details h3 {
+    font-size: 1.1em;           /* Tamaño de fuente para el nombre del producto */
+    color: #333;                /* Color gris oscuro */
+    margin-bottom: 5px;         /* Margen inferior */
+    font-family: 'Poppins', sans-serif; /* Fuente */
+}
+
+.cart-item-details p {
+    font-size: 0.9em;       /* Tamaño de fuente para el precio */
+    color: #777;            /* Color gris */
+    margin-bottom: 0;       /* Elimina el margen inferior */
+}
+
+/* Controles de cantidad (botones + y - y input) */
+.cart-item-quantity-controls {
+    display: flex;          /* Usa Flexbox para alinear los botones y el input */
+    align-items: center;    /* Centra los elementos verticalmente */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 5px;     /* Bordes redondeados */
+    overflow: hidden;       /* Recorta los bordes */
+    margin-right: 15px;     /* Margen a la derecha */
+}
+
+.cart-item-quantity-controls .quantity-btn {
+    background-color: #f0f0f0;  /* Color de fondo de los botones */
+    border: none;               /* Sin borde */
+    padding: 8px 12px;          /* Relleno interno */
+    cursor: pointer;            /* Cursor de mano */
+    font-size: 1em;             /* Tamaño de fuente */
+    color: #555;                /* Color de texto gris */
+    transition: background-color 0.2s ease; /* Transición suave */
+}
+
+.cart-item-quantity-controls .quantity-btn:hover {
+    background-color: #e0e0e0;  /* Cambia el color de fondo al pasar el cursor */
+}
+
+.cart-item-quantity-controls .item-quantity-input {
+    width: 40px;            /* Ancho del input */
+    text-align: center;     /* Centra el texto */
+    border: none;           /* Sin borde */
+    border-left: 1px solid #ccc; /* Borde izquierdo para separar del botón */
+    border-right: 1px solid #ccc; /* Borde derecho para separar del botón */
+    padding: 8px 0;         /* Relleno vertical */
+    font-size: 1em;         /* Tamaño de fuente */
+    -moz-appearance: textfield; /* Oculta las flechas en Firefox */
+}
+
+/* Ocultar flechas de incremento/decremento en Chrome/Safari/Edge */
+.cart-item-quantity-controls .item-quantity-input::-webkit-outer-spin-button,
+.cart-item-quantity-controls .item-quantity-input::-webkit-inner-spin-button {
+    -webkit-appearance: none; /* Oculta las flechas en Webkit (Chrome, Safari) */
+    margin: 0;
+}
+
+.cart-item-price {
+    font-size: 1.1em;       /* Tamaño de fuente para el precio total del ítem */
+    font-weight: bold;      /* Texto en negrita */
+    color: #E64A8E;         /* Color rosado fuerte */
+    margin-right: 15px;     /* Margen a la derecha */
+    min-width: 80px;        /* Ancho mínimo */
+    text-align: right;      /* Alinea el texto a la derecha */
+}
+
+.remove-item-btn {
+    background-color: #ffcccc;  /* Color de fondo rosado claro */
+    color: #cc0000;             /* Color de texto rojo */
+    border: none;               /* Sin borde */
+    border-radius: 50%;         /* Forma circular */
+    width: 30px;                /* Ancho del botón */
+    height: 30px;               /* Altura del botón */
+    display: flex;              /* Usa Flexbox para centrar el icono 'x' */
+    justify-content: center;    /* Centra horizontalmente */
+    align-items: center;        /* Centra verticalmente */
+    font-size: 1.2em;           /* Tamaño de fuente del icono */
+    cursor: pointer;            /* Cursor de mano */
+    transition: background-color 0.2s ease, transform 0.2s ease; /* Transiciones suaves */
+    margin-left: auto;          /* Empuja el botón a la derecha */
+}
+
+.remove-item-btn:hover {
+    background-color: #ffaaaa;  /* Cambia el color de fondo al pasar el cursor */
+    transform: scale(1.1);      /* Aumenta ligeramente el tamaño */
+}
+
+/* Estilos para el resumen del pedido */
+.summary-line {
+    display: flex;              /* Usa Flexbox */
+    justify-content: space-between; /* Alinea los elementos en los extremos */
+    padding: 10px 0;            /* Relleno vertical */
+    border-bottom: 1px dashed #eee; /* Borde punteado inferior */
+    color: #555;                /* Color de texto gris */
+    font-size: 1em;             /* Tamaño de fuente */
+}
+
+.summary-line.shipping {
+    color: #333;                /* Color de texto gris oscuro */
+    font-weight: normal;        /* Fuente normal */
+}
+
+.summary-total {
+    display: flex;              /* Usa Flexbox */
+    justify-content: space-between; /* Alinea los elementos en los extremos */
+    padding: 15px 0;            /* Relleno vertical */
+    font-size: 1.4em;           /* Tamaño de fuente */
+    font-weight: bold;          /* Texto en negrita */
+    color: #E64A8E;             /* Color rosado fuerte */
+    border-top: 2px solid #E64A8E; /* Borde superior rosado fuerte */
+    margin-top: 15px;           /* Margen superior */
+}
+
+.checkout-button {
+    background-color: #E64A8E;          /* Color de fondo rosado fuerte */
+    color: white;                       /* Color de texto blanco */
+    padding: 15px 20px;                 /* Relleno interno */
+    border: none;                       /* Sin borde */
+    border-radius: 5px;                 /* Bordes redondeados */
+    font-size: 1.1em;                   /* Tamaño de fuente */
+    cursor: pointer;                    /* Cursor de mano */
+    transition: background-color 0.3s ease; /* Transición suave */
+    width: 100%;                        /* Ocupa todo el ancho */
+    margin-top: 25px;                   /* Margen superior */
+    font-weight: bold;                  /* Texto en negrita */
+}
+
+.checkout-button:hover {
+    background-color: #d03a7a;  /* Cambia el color de fondo al pasar el cursor */
+}
+
+.payment-options {
+    text-align: center;     /* Centra el texto */
+    margin-top: 20px;       /* Margen superior */
+    font-size: 0.9em;       /* Tamaño de fuente */
+    color: #777;            /* Color de texto gris */
+}
+
+.payment-options img {
+    margin-top: 10px;       /* Margen superior */
+}
+
+/* --- Responsive Design (Media Queries) --- */
+/*
+   Estas reglas ajustan el diseño de la página en diferentes tamaños de pantalla.
+*/
+@media (max-width: 992px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Columnas más pequeñas en tablets grandes */
+    }
+}
+
+@media (max-width: 768px) {
+    .cart-layout {
+        flex-direction: column; /* Apila las columnas del carrito en pantallas medianas */
+    }
+    .cart-items-section,
+    .cart-summary-section {
+        flex: none;     /* Desactiva el crecimiento flexible */
+        width: 100%;    /* Las columnas ocupan todo el ancho */
+    }
+    .cart-page-content {
+        margin: 20px;   /* Reduce el margen */
+        padding: 15px;  /* Reduce el relleno */
+    }
+    .main-header {
+        flex-direction: column; /* Apila los elementos del encabezado */
+        text-align: center;     /* Centra el texto */
+        padding: 10px;          /* Reduce el relleno */
+    }
+    .header-center-content {
+        margin-top: 10px;       /* Margen superior */
+    }
+    .main-site-title {
+        font-size: 2.5em;       /* Tamaño de fuente más pequeño */
+    }
+    .main-nav ul {
+        flex-wrap: wrap;        /* Permite que los enlaces de navegación se envuelvan */
+        gap: 10px;              /* Reduce el espacio entre enlaces */
+        margin-top: 10px;       /* Margen superior */
+    }
+    .charm-detail-card {
+        flex-direction: column; /* Apila los elementos en la página de detalle */
+    }
+    .charm-detail-info {
+        text-align: center;     /* Centra el texto en la página de detalle */
+    }
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajusta las columnas de la galería */
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-item {
+        flex-wrap: wrap;        /* Envuelve los elementos de cada ítem del carrito */
+        justify-content: center;/* Centra los elementos */
+        text-align: center;     /* Centra el texto */
+        gap: 10px;              /* Espacio entre los elementos */
+    }
+    .cart-item-image {
+        margin-right: 0;        /* Elimina el margen derecho */
+        margin-bottom: 10px;    /* Margen inferior */
+    }
+    .cart-item-details,
+    .cart-item-quantity-controls,
+    .cart-item-price,
+    .remove-item-btn {
+        margin-right: 0;
+        margin-left: 0;
+        width: 100%;            /* Ocupan todo el ancho */
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .remove-item-btn {
+        margin-top: 10px;
+    }
+    .main-site-title {
+        font-size: 2em;         /* Tamaño de fuente más pequeño */
+    }
+    .main-nav ul li a {
+        padding: 6px 10px;      /* Relleno más pequeño */
+        font-size: 0.9em;       /* Tamaño de fuente más pequeño */
+    }
+    .about-section, .contact-section, .charm-detail-page {
+        margin: 20px;
+        padding: 15px;
+    }
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Ajusta las columnas para móviles */
+    }
+}
+
+
+/* --- ESTILOS PARA LA PÁGINA "SOBRE NOSOTROS" (sobre-nosotros.html) --- */
+/*
+   Estilos específicos para la página "Sobre Nosotros".
+*/
+.about-us-page-content {
+    max-width: 900px;           /* Ancho máximo */
+    margin: 40px auto 60px;     /* Centrado con márgenes superior/inferior */
+    padding: 30px;              /* Relleno interior */
+    background-color: #fff;     /* Fondo blanco */
+    border-radius: 12px;        /* Bordes redondeados */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* Sombra más pronunciada */
+    line-height: 1.7;           /* Espaciado de línea */
+    color: #444;                /* Color de texto gris */
+}
+
+.about-us-hero {
+    text-align: center;         /* Centra el texto */
+    margin-bottom: 50px;        /* Margen inferior */
+    padding-bottom: 30px;       /* Relleno inferior */
+    border-bottom: 1px solid #f0e0e0; /* Borde inferior */
+}
+
+.about-us-hero .section-title {
+    font-family: "Gruppo", sans-serif;  /* Fuente para el título */
+    color: #E64A8E;                     /* Color rosado fuerte */
+    font-size: 1.6em;                   /* Tamaño de fuente */
+    margin-bottom: 15px;                /* Margen inferior */
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.08); /* Sombra de texto */
+}
+
+.about-us-hero .hero-intro {
+    font-family: 'Poppins', sans-serif; /* Fuente */
+    font-size: 1.1em;                   /* Tamaño de fuente */
+    color: #666;                        /* Color de texto gris */
+    max-width: 700px;                   /* Ancho máximo */
+    margin: 0 auto;                     /* Centrado horizontal */
+    font-weight: 300;                   /* Peso de fuente ligero */
+}
+
+/* Contenedor principal para las columnas de la historia */
+.about-us-story-container {
+    display: grid;              /* Usa Gridbox para el layout */
+    grid-template-columns: 1fr; /* Una columna por defecto en móviles */
+    gap: 30px;                  /* Espacio entre las columnas */
+}
+
+.story-column {
+    background-color: #fcfcfc;  /* Fondo casi blanco */
+    padding: 25px;              /* Relleno interior */
+    border-radius: 10px;        /* Bordes redondeados */
+    border: 1px solid #ffe6f0;  /* Borde rosado claro */
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05); /* Sombra sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+.story-column:hover {
+    transform: translateY(-5px);    /* Eleva la columna al pasar el cursor */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1); /* Sombra más pronunciada */
+}
+
+.story-column h3 {
+    font-family: 'Dancing Script', cursive; /* Fuente específica para los títulos de la historia */
+    color: #E64A8E;                     /* Color rosado fuerte */
+    font-size: 2.2em;                   /* Tamaño de fuente */
+    margin-bottom: 15px;                /* Margen inferior */
+    text-align: center;                 /* Centra el texto */
+}
+
+.story-column p {
+    font-family: 'Poppins', sans-serif; /* Fuente para los párrafos */
+    font-size: 1.05em;                  /* Tamaño de fuente */
+    color: #555;                        /* Color de texto gris oscuro */
+    text-align: justify;                /* Justifica el texto */
+}
+
+.story-column.final-block {
+    text-align: center;         /* Centra el texto */
+    background-color: #ffe6f0;  /* Fondo rosado claro */
+    border-color: #ffb3d9;      /* Borde rosado medio */
+}
+
+.story-column.final-block p {
+    font-weight: bold;      /* Texto en negrita */
+    color: #E64A8E;         /* Color rosado fuerte */
+    font-size: 1.15em;      /* Tamaño de fuente */
+}
+
+/* Media Queries para Responsive Design de la página "Sobre Nosotros" */
+@media (min-width: 768px) {
+    .about-us-story-container {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas de tablet */
+    }
+    .story-column.final-block {
+        grid-column: 1 / -1; /* El bloque final ocupa todo el ancho */
+    }
+}
+
+@media (min-width: 1024px) {
+    .about-us-story-container {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas de escritorio */
+    }
+    .story-column.final-block {
+        grid-column: 1 / -1; /* El bloque final ocupa todo el ancho */
+    }
+}
+
+@media (max-width: 500px) {
+    .about-us-page-content {
+        padding: 20px;
+        margin: 20px auto;
+    }
+    .about-us-hero .section-title {
+        font-size: 2.5em;
+    }
+    .about-us-hero .hero-intro {
+        font-size: 1.1em;
+    }
+    .story-column h3 {
+        font-size: 1.8em;
+    }
+    .story-column p {
+        font-size: 0.95em;
+    }
+}
+
+
+/* --- NUEVOS ESTILOS PARA LA PÁGINA DE INICIO (index.html) --- */
+/*
+   Estilos específicos para la sección principal de la página de inicio.
+*/
+.main-content-home {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.hero-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+
+.hero-title {
+    font-family: "Gruppo", sans-serif;
+    color: #E64A8E;
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.08);
+}
+
+.hero-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    color: #666;
+    max-width: 600px;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.hero-image-container {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 35px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.cta-button {
+    background-color: #ffb3d9;
+    color: #E64A8E;
+    padding: 15px 35px;
+    border: 2px solid #E64A8E;
+    border-radius: 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cta-button:hover {
+    background-color: #E64A8E;
+    color: white;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Media Queries para responsividad del Hero (ajustados a tus breakpoints) */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.8em;
+    }
+    .hero-subtitle {
+        font-size: 1.1em;
+    }
+    .cta-button {
+        font-size: 1.1em;
+        padding: 12px 30px;
+    }
+    .hero-home {
+        padding: 30px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.2em;
+    }
+    .hero-subtitle {
+        font-size: 1em;
+    }
+    .cta-button {
+        font-size: 1em;
+        padding: 10px 25px;
+    }
+    .hero-home {
+        padding: 25px 10px;
+        margin: 20px auto;
+    }
+    .main-content-home {
+        margin: 20px auto;
+        padding: 10px;
+    }
+}
+
+
+/* --- NUEVOS ESTILOS PARA LOS MODALES DE CONFIRMACIÓN DE PAGO (Añadidos por Gemini) --- */
+/*
+   Estos estilos definen la apariencia de las ventanas emergentes (modales)
+   que se usan para la confirmación de pago y otros mensajes.
+*/
+
+.modal {
+    display: none;                      /* Oculto por defecto */
+    position: fixed;                    /* Posición fija para superponer toda la pantalla */
+    z-index: 1000;                      /* Asegura que esté por encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;                     /* Permite desplazamiento si el contenido es grande */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente oscuro */
+    justify-content: center;            /* Centra el contenido del modal horizontalmente */
+    align-items: center;                /* Centra el contenido del modal verticalmente */
+}
+
+.modal-content {
+    background-color: #fff;             /* Fondo blanco para el contenido del modal */
+    margin: auto;                       /* Centra el contenido */
+    padding: 30px;                      /* Relleno interior */
+    border-radius: 10px;                /* Bordes redondeados */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+    width: 90%;                         /* Ancho responsivo */
+    max-width: 500px;                   /* Ancho máximo */
+    position: relative;                 /* Permite posicionar el botón de cerrar */
+    text-align: center;                 /* Centra el texto */
+    animation: fadeInScale 0.3s ease-out; /* Aplica una animación de aparición */
+}
+
+/* Animación para el modal */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;                 /* Empieza completamente transparente */
+        transform: scale(0.95);     /* Empieza ligeramente más pequeño */
+    }
+    to {
+        opacity: 1;                 /* Termina completamente visible */
+        transform: scale(1);        /* Termina en su tamaño normal */
+    }
+}
+
+/* Estilos para el botón de cerrar 'x' */
+.close-button {
+    color: #aaa;                        /* Color gris claro */
+    position: absolute;                 /* Posición absoluta para colocarlo en la esquina */
+    top: 15px;                          /* Distancia desde la parte superior */
+    right: 25px;                        /* Distancia desde la derecha */
+    font-size: 30px;                    /* Tamaño de fuente */
+    font-weight: bold;                  /* Texto en negrita */
+    cursor: pointer;                    /* Cursor de mano */
+    transition: color 0.2s ease;        /* Transición suave del color */
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #333; /* Color más oscuro al pasar el cursor */
+}
+
+/* Estilos para los títulos y párrafos dentro de los modales */
+.modal-content h3 {
+    font-family: "Gruppo", sans-serif;
+    color: #E64A8E;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.05);
+}
+
+.modal-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #555;
+    white-space: pre-wrap; /* Mantiene los saltos de línea (\n) del JavaScript */
+}
+
+/* Estilos para los botones de acción dentro de los modales */
+#modal-sinpe-accept-button,
+#modal-order-received-ok-button {
+    background-color: #E64A8E;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#modal-sinpe-accept-button:hover,
+#modal-order-received-ok-button:hover {
+    background-color: #d03a7a;
+    transform: scale(1.05);
+}
+
+/* Media Queries para responsividad de los modales */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        padding: 25px;
+    }
+    .modal-content h3 {
+        font-size: 1.8em;
+    }
+    .modal-content p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        padding: 20px;
+    }
+    .modal-content h3 {
+        font-size: 1.5em;
+    }
+    #modal-sinpe-accept-button,
+    #modal-order-received-ok-button {
+        padding: 10px 70px;
+        font-size: 0.9em;
+    }
+}
+
+.educational-notice {
+    text-align: center;                 /* Centra el texto */
+    background-color: #fff;             /* Fondo blanco */
+    border: 2px dashed #E64A8E;         /* Borde punteado rosado */
+    padding: 25px;                      /* Espaciado interno */
+    margin: 50px auto;                  /* Margen para separarlo de otros elementos y centrarlo */
+    max-width: 700px;                   /* Ancho máximo del contenedor */
+    border-radius: 10px;                /* Bordes redondeados */
+    color: #555;                        /* Color de texto gris oscuro */
+}
+
+.educational-notice h3 {
+    font-family: "Gruppo", sans-serif;  /* Fuente para el título */
+    color: #E64A8E;                     /* Color rosado */
+    font-size: 2em;                     /* Tamaño de la fuente */
+    margin-bottom: 10px;                /* Margen inferior */
+}
+
+.educational-notice p {
+    font-size: 1.1em;                   /* Tamaño de la fuente para el párrafo */
+    line-height: 1.5;                   /* Espaciado de línea */
+}
