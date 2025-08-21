@@ -1,0 +1,54 @@
+<!DOCTYPE html>  
+<html lang="es"> 
+<head>
+  <link rel="icon" href="Mar Rosa Loga.jpg" type="image/xicon">
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adapta la página a diferentes dispositivos.-->
+  <title>Carrito de Compras | Mar Rosa</title> <!--El título que se muestra en la pestaña del navegador.-->
+  <link rel="stylesheet" href="style.css"> <!-- Enlaza el archivo de estilos CSS.-->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins&display=swap" rel="stylesheet"> <!-- Enlaza fuentes de Google Fonts.-->
+</head>
+<body> <!-- El cuerpo de la página (todo lo que es visible).-->
+  <header class="main-header"> <!-- El encabezado superior de la página.-->
+    <a href="index.html" class="logo-link"> <!-- Un enlace que lleva a la página de inicio.-->
+      <img src="MarRosaLogo1.jpg" alt="Mar Rosa Logo" class="logo"> <!-- La imagen del logo de la marca.-->
+    </a>
+    <div class="header-center-content"> <!-- Un contenedor para el título y la navegación.-->
+      <h1 class="main-site-title">Mar Rosa</h1> <!-- El título principal del sitio.-->
+      <nav class="main-nav"> <!-- La barra de navegación principal.-->
+        <ul> <!-- Una lista de enlaces.-->
+          <li><a href="sobre.html">Sobre</a></li> <!-- Enlace a la página "Sobre".-->
+          <li><a href="galeria.html">Galería</a></li> <!-- Enlace a la página "Galería".-->
+          <li><a href="carrito.html">Carrito</a></li> <!-- Enlace a la página del "Carrito".-->
+        </ul>
+      </nav>
+    </div>
+  </header>
+<main class="charm-detail-page"> <!--  Contenedor principal de la página de detalle de un charm.-->
+    <div class="charm-detail-card"> <!--  La tarjeta o sección que contiene la información del charm.-->
+      <div class="charm-detail-image-container"> <!--  Contenedor para la imagen del charm.-->
+
+        <img src="RamaDeFlores&Mariposas.jpg" alt="Charm Rama de Flores y Mariposas"> <!--  Muestra la imagen del charm. El 'alt' describe la imagen para accesibilidad.-->
+      </div>
+      <div class="charm-detail-info"> <!--  Contenedor para el texto y los botones del charm.-->
+        <h2>🌸🦋 Rama de Flores y Mariposas</h2> <!--  Título o nombre del charm.-->
+        <p class="charm-description">Una pequeña obra de arte colgante. Esta ramita entrelazada con mariposas y flores en tonos pastel celebra la conexión con la naturaleza y con tu lado más tierno. Para quienes viven su día a día como si fuera una caminata por un jardín encantado.</p> <!--  Descripción detallada del charm.-->
+        <span class="charm-detail-price">₡5.000</span> <!--  Muestra el precio del charm.-->
+        <button class="add-to-cart-btn" data-product-id="rama-flores-mariposas">Añadir al carrito</button> <!--  El botón para añadir el charm al carrito. El 'data-product-id' es usado por JavaScript para identificar el producto.-->
+        <p class="availability">Disponible en stock</p> <!--  Muestra el estado de disponibilidad del producto.-->
+      </div>
+    </div>
+    <div class="back-link-container"> <!--  Contenedor para los enlaces de navegación al pie de la página.-->
+      <a href="galeria.html">← Seguir comprando</a> <!--  Enlace para volver a la galería.-->
+    </div>
+    <div class="back-link-container" style="margin-top: 15px;"> <!--  Otro contenedor para un enlace de navegación.-->
+      <a href="index.html">← Volver al Inicio</a> <!--  Enlace para volver a la página de inicio.-->
+    </div>
+  </main>
+  <footer> <!--  El pie de página del sitio.-->
+    <p>&copy; 2025 Mar Rosa </p> <!--  El aviso de derechos de autor.-->
+  </footer>
+  <script src="productos.js"></script> <!--  Enlaza el archivo de JavaScript que contiene los datos de los productos.-->
+  <script src="script.js"></script> <!--  Enlaza el archivo de JavaScript principal con la lógica de la página.-->
+</body>
+</html>

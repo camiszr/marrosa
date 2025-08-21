@@ -1,0 +1,79 @@
+<!DOCTYPE html>  
+<html lang="es"> 
+<head>
+  <link rel="icon" href="Mar Rosa Loga.jpg" type="image/xicon">
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adapta la página a diferentes dispositivos.-->
+  <title>Carrito de Compras | Mar Rosa</title> <!--El título que se muestra en la pestaña del navegador.-->
+  <link rel="stylesheet" href="style.css"> <!-- Enlaza el archivo de estilos CSS.-->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins&display=swap" rel="stylesheet"> <!-- Enlaza fuentes de Google Fonts.-->
+</head>
+<body> <!-- El cuerpo de la página (todo lo que es visible).-->
+  <header class="main-header"> <!-- El encabezado superior de la página.-->
+    <a href="index.html" class="logo-link"> <!-- Un enlace que lleva a la página de inicio.-->
+      <img src="MarRosaLogo1.jpg" alt="Mar Rosa Logo" class="logo"> <!-- La imagen del logo de la marca.-->
+    </a>
+    <div class="header-center-content"> <!-- Un contenedor para el título y la navegación.-->
+      <h1 class="main-site-title">Mar Rosa</h1> <!-- El título principal del sitio.-->
+      <nav class="main-nav"> <!-- La barra de navegación principal.-->
+        <ul> <!-- Una lista de enlaces.-->
+          <li><a href="sobre.html">Sobre</a></li> <!-- Enlace a la página "Sobre".-->
+          <li><a href="galeria.html">Galería</a></li> <!-- Enlace a la página "Galería".-->
+          <li><a href="carrito.html">Carrito</a></li> <!-- Enlace a la página del "Carrito".-->
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="cart-page-content"> <!-- El contenido principal de la página del carrito.-->
+    <h2>Tu Carrito de Compras</h2> <!-- El título principal de la página.-->
+    <div class="cart-layout"> <!-- Un contenedor principal para el diseño del carrito.-->
+      <div class="cart-items-section"> <!-- La sección donde se listan los productos.-->
+        <p id="empty-cart-message" class="empty-cart-message-style" style="display: none;"> <!-- El mensaje para cuando el carrito está vacío.-->
+            Tu carrito está vacío. ¡Empieza a añadir charms!
+        </p>
+        <div id="cart-items-container"> <!-- El área donde JavaScript inserta los productos.-->
+        </div>
+      </div>
+      <div class="cart-summary-section"> <!-- La sección del resumen del pedido.-->
+        <h3>Resumen de tu Pedido</h3> <!-- El subtítulo del resumen.-->
+        <div class="summary-line"> <!-- La línea del subtotal.-->
+          <span>Subtotal (<span id="cart-item-count">0</span> artículos)</span> <!-- Muestra la cantidad de artículos y el texto "Subtotal".-->
+          <span id="cart-subtotal">₡0</span> <!-- El valor del subtotal.-->
+        </div>
+        <div class="summary-total"> <!-- La línea del total.-->
+          <span>Total</span> <!-- El texto "Total".-->
+          <span id="cart-total">₡0</span> <!-- El valor del total.-->
+        </div>
+        <button class="checkout-button" id="checkout-button">Proceder al Pago</button> <!-- El botón de pago.-->
+      </div>
+    </div>
+    <div class="back-link-container"> <!-- Un contenedor para los enlaces de navegación.-->
+      <a href="galeria.html">← Seguir Comprando</a> <!-- Enlace para seguir comprando.-->
+    </div>
+    <div class="back-link-container" style="margin-top: 15px;"> <!-- Otro contenedor para enlaces de navegación.-->
+      <a href="index.html">← Volver al Inicio</a> <!-- Enlace para volver a la página de inicio.-->
+    </div>
+  </main>
+  <footer> <!-- El pie de página.-->
+    <p>&copy; 2025 Mar Rosa </p> <!-- El aviso de derechos de autor.-->
+  </footer>
+  <div id="sinpeConfirmModal" class="modal"> <!-- Un modal para la confirmación de pago.-->
+    <div class="modal-content"> <!-- El contenido dentro del modal.-->
+      <span class="close-button" data-modal="sinpeConfirmModal">&times;</span> <!-- El botón para cerrar el modal.-->
+      <div id="sinpe-modal-message-content"> <!-- El área para el mensaje de SINPE.-->
+      </div>
+      <button id="modal-sinpe-accept-button">Aceptar</button> <!-- El botón de aceptar del modal.-->
+    </div>
+  </div>
+  <div id="orderReceivedModal" class="modal"> <!-- Un modal para confirmar el pedido.-->
+    <div class="modal-content"> <!-- El contenido dentro del modal.-->
+      <span class="close-button" data-modal="orderReceivedModal">&times;</span> <!-- El botón para cerrar el modal.-->
+      <h3>¡Gracias por confiar en nosotras!</h3> <!-- El título del modal.-->
+      <button id="modal-order-received-ok-button">OK</button> <!-- El botón de OK del modal.-->
+    </div>
+  </div>
+
+  <script src="productos.js"></script> <!-- Enlaza el archivo de JavaScript con los productos.-->
+  <script src="script.js"></script> <!-- Enlaza el archivo de JavaScript con la lógica del carrito.-->
+</body>
+</html>
